@@ -9,23 +9,40 @@ void display(queue<int>& q){
         q.pop();  // fhir x ko pop kr diya 
         q.push(x);  //then x ko wapis push kr diya kyuki queue h toh dusri taraf se push hua h 
 
+    }    
+}
+int del(queue<int> & q , int val){
+    int n = q.size();
+    for(int i =1;i<=n;i++){
+       if(q.front() == val){
+        q.pop();
+       }
     }
-    
-
 }
 int main(){
     queue <int> q;
-    q.push(10);
-    q.push(20);
-    q.push(30);
-    q.push(40);
-    q.push(50);
-       cout<<q.size()<<" \n";
-    cout<<q.front()<<" \n";//first element will show 
-    cout<<q.back()<<"\n";//last element will show
-    q.pop();//remove the first standing  elemnt
-    cout<<q.front()<<" \n";
-    cout<<q.size()<<" \n";
+    // q.push(10);
+    // q.push(20);
+    // q.push(30);
+    // q.push(40);
+    // q.push(50);
+    //    cout<<q.size()<<" \n";
+    // cout<<q.front()<<" \n";//first element will show 
+    // cout<<q.back()<<"\n";//last element will show
+    // q.pop();//remove the first standing  elemnt
+    // cout<<q.front()<<" \n";
+    // cout<<q.size()<<" \n";
+    // user input queue
+    int size ,ele,del;
+    cout<<"ENTER THE SIZE OF QUEUE : ";
+    cin>>size;
+    for(int i = 1;i<=size;i++){
+        cout<<"ENTER THE "<<i<<"ELEMENT FOR QUEUE : ";
+        cin>>ele;
+        q.push(ele);
+    }
+
+
     cout<<"YOUR QUEUE : ";
     display(q);
 }

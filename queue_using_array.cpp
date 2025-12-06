@@ -65,7 +65,7 @@ class Queue{
 int main(){
     Queue q;//push,pop,front,back,size,empty
     q.front();
-    q.empty();
+    // q.empty();
     q.push(9);
     q.push(33);
     q.push(11);
